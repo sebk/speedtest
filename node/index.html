@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+    <title>
+        Speedtests
+    </title>
+    <!-- Socket.io import the module I have in the project -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!-- Javascript Highcharts import the file directly from your server -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var options = {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Speedtests'
+                },
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Speed (Mbit/s)'
+                    }
+                },
+                series: [{
+                    name: 'Ping',
+                    data: [1, 2, 3, 4]
+                }, {
+                    name: 'Download',
+                    data: [4, 5, 7, 8]
+                }, {
+                    name: 'Upload',
+                    data: [2, 5, 6, 2]
+                }]
+
+            }
+
+            var myChart = Highcharts.chart('chart', options);
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <!--  'll have the div where the graph. I tell it that the width of the 
+         screen is 100% and the height is 400px -->
+    <div id="chart" style="width:100%; height:400px;"></div>
+</body>
+
+</html>

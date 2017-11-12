@@ -1,0 +1,19 @@
+#!/bin/bash
+
+date >> speedtest.log
+
+#speedtest --simple >> speedtest.log
+
+header=`./speedtest-csv --no-share --header --sep ";"`
+result=`./speedtest-csv --no-share --sep ";"`
+
+echo $header >> speedtest.log
+echo $result >> speedtest.log
+
+if [ ! -f speedtest.csv ]; then
+  echo $header > speedtest.csv
+fi
+
+echo $result >> speedtest.csv
+
+echo "--------" >> speedtest.log
