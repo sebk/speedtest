@@ -20,40 +20,40 @@ const App = () => {
     //      ],
 
     chart: {
-      type: 'column',
+      type: 'column'
     },
     title: {
-      text: 'Browser market shares. January, 2015 to May, 2015',
+      text: 'Browser market shares. January, 2015 to May, 2015'
     },
     subtitle: {
       text:
-        'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.',
+        'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
     },
     xAxis: {
-      type: 'category',
+      type: 'category'
     },
     yAxis: {
       title: {
-        text: 'Total percent market share',
-      },
+        text: 'Total percent market share'
+      }
     },
     legend: {
-      enabled: false,
+      enabled: false
     },
     plotOptions: {
       series: {
         borderWidth: 0,
-        dataLabels: {
-          enabled: true,
-          format: '{point.y:.1f}%',
-        },
-      },
+        // dataLabels: {
+        //   enabled: true,
+        //   format: '{point.y:.1f}%'
+        // }
+      }
     },
 
     tooltip: {
       headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-      pointFormat:
-        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>',
+      // pointFormat:
+      //   '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
     },
 
     series: [
@@ -64,35 +64,35 @@ const App = () => {
           {
             name: 'Microsoft Internet Explorer',
             y: 56.33,
-            drilldown: 'Microsoft Internet Explorer',
+            drilldown: 'Microsoft Internet Explorer'
           },
           {
             name: 'Chrome',
             y: 24.03,
-            drilldown: 'Chrome',
+            drilldown: 'Chrome'
           },
           {
             name: 'Firefox',
             y: 10.38,
-            drilldown: 'Firefox',
+            drilldown: 'Firefox'
           },
           {
             name: 'Safari',
             y: 4.77,
-            drilldown: 'Safari',
+            drilldown: 'Safari'
           },
           {
             name: 'Opera',
             y: 0.91,
-            drilldown: 'Opera',
+            drilldown: 'Opera'
           },
           {
             name: 'Proprietary or Undetectable',
             y: 0.2,
-            drilldown: null,
-          },
-        ],
-      },
+            drilldown: null
+          }
+        ]
+      }
     ],
     drilldown: {
       series: [
@@ -105,8 +105,8 @@ const App = () => {
             ['v9.0', 8.11],
             ['v10.0', 5.33],
             ['v6.0', 1.06],
-            ['v7.0', 0.5],
-          ],
+            ['v7.0', 0.5]
+          ]
         },
         {
           name: 'Chrome',
@@ -125,8 +125,8 @@ const App = () => {
             ['v37.0', 0.38],
             ['v33.0', 0.19],
             ['v34.0', 0.14],
-            ['v30.0', 0.14],
-          ],
+            ['v30.0', 0.14]
+          ]
         },
         {
           name: 'Firefox',
@@ -139,8 +139,8 @@ const App = () => {
             ['v38', 1.02],
             ['v31', 0.33],
             ['v33', 0.22],
-            ['v32', 0.15],
-          ],
+            ['v32', 0.15]
+          ]
         },
         {
           name: 'Safari',
@@ -152,13 +152,13 @@ const App = () => {
             ['v5.0', 0.3],
             ['v6.1', 0.29],
             ['v7.0', 0.26],
-            ['v6.2', 0.17],
-          ],
+            ['v6.2', 0.17]
+          ]
         },
         {
           name: 'Opera',
           id: 'Opera',
-          data: [['v12.x', 0.34], ['v28', 0.24], ['v27', 0.17], ['v29', 0.16]],
+          data: [['v12.x', 0.34], ['v28', 0.24], ['v27', 0.17], ['v29', 0.16]]
         }
       ]
     }
